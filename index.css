@@ -1,0 +1,132 @@
+/* src/index.css */
+
+:root {
+  --bg-dark: #121212;
+  --card-dark: #1e1e1e;
+  --primary: #00bcd4;
+  --danger: #f44336;
+  --success: #4caf50;
+  --text: #ffffff;
+  --border: #333;
+  --radius: 10px;
+  --spacing: 15px;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: var(--spacing);
+}
+
+h1, h2 {
+  color: var(--primary);
+  text-align: center;
+}
+
+.order-card {
+  background-color: var(--card-dark);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--spacing);
+  margin-bottom: var(--spacing);
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.order-card:hover {
+  transform: scale(1.01);
+}
+
+.order-card p {
+  margin: 8px 0;
+}
+
+.order-actions button {
+  margin-right: 10px;
+  padding: 8px 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.order-actions .cancel {
+  background-color: var(--danger);
+  color: white;
+}
+
+.order-actions .complete {
+  background-color: var(--success);
+  color: white;
+}
+
+.order-actions button:hover {
+  opacity: 0.85;
+}
+
+/* Form */
+.order-form {
+  background-color: var(--card-dark);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--spacing);
+  margin-bottom: 20px;
+}
+
+.order-form input,
+.order-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background-color: #2b2b2b;
+  color: white;
+}
+
+.order-form button {
+  width: 100%;
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.order-form button:hover {
+  background-color: #0097a7;
+}
+
+
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+}
+.modal-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
